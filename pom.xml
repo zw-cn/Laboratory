@@ -16,6 +16,7 @@
         <module>Activiti</module>
         <module>SpringSource</module>
         <module>Lambda</module>
+        <module>Java8</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -43,8 +44,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>15</source>
+                    <target>15</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
