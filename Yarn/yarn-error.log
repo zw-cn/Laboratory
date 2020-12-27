@@ -1,0 +1,34 @@
+Arguments: 
+  D:\software\work\Nodejses\12.19\node.exe C:\Users\zw-cn\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add jquery
+
+PATH: 
+  D:\software\common\Xftp\;D:\software\common\Xshell\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\software\work\VCS\TortoiseSVN_1.12.2\bin;D:\software\work\JDKs\JDK11_06\bin;D:\software\work\Mavens\apache-maven-3.6.1\bin;D:\software\work\Zookeepers\zookeeper-3.4.12\bin;C:\WINDOWS\System32\OpenSSH\;D:\software\work\VCS\Gits\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\software\work\Nodejses\12.19\;C:\Users\zw-cn\AppData\Local\Microsoft\WindowsApps;C:\Users\zw-cn\AppData\Roaming\npm;D:\software\tools\develop\VSCode\bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND e-proxy.yfb.sunline.cn
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+
+npm manifest: 
+  {
+    "name": "YarnLab",
+    "version": "1.0.0",
+    "description": "yarn的基本使用",
+    "main": "index.js",
+    "author": "zw-cn",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h2>v-text:纯文本</h2>
+    <div v-text="message" id="vText">
+    </div>
+    <br>
+    <h2>v-html:类innerHTML</h2>
+    <div v-html="html" id="vHtml">
+    </div>
+    <br>
+    <h2>v-bind:CSS</h2>
+    <div :class="{red:isRed}" v-html="message" id="vBind">
+    </div>
+    <div v-bind:class="isRed?'red':''" v-html="message" id="vBind2">
+    </div>
+    <br>
+    <hr/>
+    <h2>v-on:绑定事件</h2>
+    ->点击数字计数
+    <div v-on:click="counter" v-html="count" id="vOn">
+    </div>
+    <div @click="counter" v-html="count" id="vOn2">
+    </div>
+    <br>
+    <h2>v-show:属性级隐藏</h2>
+    <div id="vShow">
+        <input type="button" @click="toggleShow" value="点击显示/隐藏">
+        <div v-show="isShow" v-html="message">
+        </div>
+    </div>
+    <br>
+    <h2>v-if:DOM级隐藏</h2>
+    <div id="vIf">
+        <input type="button" @click="toggleShow" value="点击显示/隐藏">
+        <div v-show="isShow" v-html="message">
+        </div>
+    </div>
+    <hr/>
+    <br>
+    <h2>v-model:双向数据绑定</h2>
+    ->回车后显示数据
+    <div id="vModel">
+        <input type="text" @keyup.enter="showEnter" v-model="inputs">
+        <input type="text" v-bind:value="enter" placeholder="上一个输入框回车后显示数据" readonly>
+        <textarea v-text="inputs" @click="showDesc" placeholder="点击文本框提示描述"></textarea>
+    </div>
+    <br>
+    <h2>v-for:遍历</h2>
+    <div id="vFor">
+        <h3>遍历四季</h3>
+        <ul>
+            <li v-for="(item,index) in list" v-text="item"></li>
+        </ul>
+        <h3>遍历对象</h3>
+        <ul>
+            <li v-for="(item,index) in users">编号：{{index+1}}，姓名：{{item.name}}，年龄：{{item.age}}</li>
+        </ul>
+    </div>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#vText",
+        data: {
+            message: "v-text instruction!"
+        }
+    })
+    var app2 = new Vue({
+        el: "#vHtml",
+        data: {
+            html: "<a href='http://www.baidu.com' title='百度'>广告度"
+        }
+    })
+    var app3 = new Vue({
+        el: "#vBind,#vBind2",
+        data: {
+            message: "v-bind instruction!",
+            isRed: true
+        }
+    })
+    var app4 = new Vue({
+        el: "#vBind2",
+        data: {
+            message: "v-bind instruction!",
+            isRed: true
+        }
+    })
+    var app5 = new Vue({
+        el: "#vOn",
+        data: {
+            count: 0,
+        },
+        methods: {
+            counter: function () {
+                this.count++;
+            }
+        }
+    })
+    var app6 = new Vue({
+        el: "#vOn2",
+        data: {
+            count: 0,
+        },
+        methods: {
+            counter: function () {
+                this.count++;
+            }
+        }
+    })
+    var app7 = new Vue({
+        el: "#vShow",
+        data: {
+            isShow: true,
+            message: 'That is so cool!'
+        },
+        methods: {
+            toggleShow: function () {
+                this.isShow = !this.isShow;
+            }
+        }
+    })
+    var app8 = new Vue({
+        el: "#vIf",
+        data: {
+            isShow: true,
+            message: 'That is so cool!'
+        },
+        methods: {
+            toggleShow: function () {
+                this.isShow = !this.isShow;
+            }
+        }
+    })
+    var app9 = new Vue({
+        el: "#vModel",
+        data: {
+            inputs: '',
+            enter: '',
+        },
+        methods: {
+            showDesc: function () {
+                alert('the desc is:' + this.inputs);
+                this.inputs += '[' + this.inputs + ']';
+            },
+            showEnter: function () {
+                this.enter = this.inputs;
+            }
+        }
+    })
+    var app10 = new Vue({
+        el: "#vFor",
+        data: {
+            list: ['春', '夏', '秋', '冬'],
+            users:[{name:'san',age:'13'},{name:'tom',age:'14'}]
+        }
+    })
+</script>
+</body>
+</html>

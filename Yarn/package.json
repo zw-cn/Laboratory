@@ -1,0 +1,11 @@
+{
+  "name": "YarnLab",
+  "version": "1.0.0",
+  "description": "yarn的基本使用",
+  "main": "index.js",
+  "author": "zw-cn",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
