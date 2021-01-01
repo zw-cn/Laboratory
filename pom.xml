@@ -17,6 +17,8 @@
         <module>SpringSource</module>
         <module>Lambda</module>
         <module>Java8</module>
+        <module>Books</module>
+        <module>ProgrammingPearlsII</module>
     </modules>
     <dependencyManagement>
         <dependencies>

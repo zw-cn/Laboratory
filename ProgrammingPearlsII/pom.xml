@@ -9,14 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Java8</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
-    </dependencies>
+    <groupId>com.zw.book</groupId>
+    <artifactId>ProgrammingPearlsII</artifactId>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
