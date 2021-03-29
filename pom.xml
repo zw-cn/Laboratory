@@ -19,6 +19,7 @@
         <module>Java8</module>
         <module>Books</module>
         <module>ProgrammingPearlsII</module>
+        <module>Video</module>
     </modules>
     <dependencyManagement>
         <dependencies>
