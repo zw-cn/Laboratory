@@ -2,10 +2,7 @@ package com.zw.video.java8;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
+import java.time.*;
 import java.util.TimeZone;
 
 /**
@@ -63,5 +60,29 @@ public class E18LocalDateTimeAPI {
         //获取指定毫秒数时间
         Instant milli = Instant.ofEpochSecond(3600);
         System.out.println(milli);
+    }
+
+    /**
+     * 日期计算
+     * 1.Duration 计算时间间隔
+     * 2.Period 计算日期间隔
+     */
+    @Test
+    void E18D1Duration() throws InterruptedException {
+        Instant instant1 = Instant.now();
+        Thread.sleep(1000);
+        Instant instant2 = Instant.now();
+        //计算时间差
+        Duration between = Duration.between(instant1, instant2);
+        System.out.println(between.getSeconds());//秒
+        System.out.println(between.toMillis());//毫秒
+
+        LocalDate date1 = LocalDate.now();
+        LocalDate date2 = LocalDate.of(2020,3,30);
+        Period period = Period.between(date1,date2);
+        System.out.println(period);//时间差
+        System.out.println(period.getYears());
+        System.out.println(period.getMonths());
+        System.out.println(period.getDays());
     }
 }
