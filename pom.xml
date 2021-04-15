@@ -14,12 +14,12 @@
         <module>File</module>
         <module>Yarn</module>
         <module>Activiti</module>
-        <module>SpringSource</module>
         <module>Lambda</module>
         <module>Java8</module>
         <module>Books</module>
         <module>ProgrammingPearlsII</module>
         <module>Video</module>
+        <module>Frame</module>
     </modules>
     <dependencyManagement>
         <dependencies>
