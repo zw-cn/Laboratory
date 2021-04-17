@@ -20,6 +20,7 @@
         <module>ProgrammingPearlsII</module>
         <module>Video</module>
         <module>Frame</module>
+        <module>Article</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -53,6 +54,12 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>1.7.25</version>
+            </dependency>
+            <!--myBatis启动器-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
